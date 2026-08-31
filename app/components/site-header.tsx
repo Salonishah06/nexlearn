@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { VertexMark } from "./logo";
-import { BellIcon, UserSolid } from "./icons";
+import { Button } from "./button";
+import { BellIcon } from "./icons";
 
 /*
   Site header — shared across all pages.
-  Full-bleed, bottom-bordered, sticky. Logo · nav · bell + avatar.
+  Full-bleed, bottom-bordered, sticky. Logo · nav · bell + auth controls.
 */
 
 const links = [
@@ -33,7 +35,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-4">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
           <button
             type="button"
             aria-label="Notifications"
@@ -41,12 +43,23 @@ export function SiteHeader() {
           >
             <BellIcon size={22} />
           </button>
-          <span
-            aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-neutral-200 text-neutral-500 ring-1 ring-neutral-200"
-          >
-            <UserSolid size={20} />
-          </span>
+          <Show when="signed-out">
+            <SignInButton mode="modal">
+              <Button variant="text" size="md" className="h-9 text-body">
+                Sign in
+              </Button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <Button variant="primary" size="md" className="h-9 text-body">
+                Sign up
+              </Button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton
+              appearance={{ elements: { avatarBox: "h-9 w-9" } }}
+            />
+          </Show>
         </div>
       </div>
     </header>
