@@ -1,7 +1,7 @@
 import type { SVGProps } from "react";
 
 /*
-  Vertex icon set
+  nexLearn icon set
   Specs: 24x24 grid · 2px stroke (outline) · rounded line caps · consistent optical balance
 */
 

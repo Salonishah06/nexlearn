@@ -2,7 +2,7 @@
 
 ## Goal
 
-Add **Clerk authentication** to the Vertex web app using the **Clerk CLI**
+Add **Clerk authentication** to the nexLearn web app using the **Clerk CLI**
 (`clerk init`), wired through Next.js 16 **proxy** middleware. Browsing stays
 fully public; nothing is gated yet (no feature is marked protected). Add clear
 sign-in / sign-up / signed-in controls to the existing `SiteHeader` so the user

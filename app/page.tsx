@@ -59,7 +59,7 @@ export default function Home() {
             Search your learning in plain English.
           </h1>
           <p className="mt-5 max-w-[520px] text-body sm:text-body-lg text-neutral-500">
-            Vertex understands what you want to learn and finds the exact lessons
+            nexLearn understands what you want to learn and finds the exact lessons
             across all your courses.
           </p>
           <Button

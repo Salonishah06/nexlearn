@@ -3,7 +3,7 @@ import {
   ChevronRightIcon,
   ChevronLeftIcon,
 } from "./icons";
-import { VertexMark } from "./logo";
+import { NexLearnMark } from "./logo";
 
 /*
   Navigation — top bar · breadcrumbs · pagination
@@ -17,8 +17,8 @@ export function NavBar() {
   return (
     <nav className="flex items-center gap-8 rounded-lg border border-neutral-200 bg-surface px-5 py-3 shadow-sm">
       <span className="flex items-center gap-2 font-display text-heading-3 font-bold text-neutral-900">
-        <VertexMark size={22} />
-        Vertex
+        <NexLearnMark size={22} />
+        nexLearn
       </span>
       <ul className="flex items-center gap-6">
         {links.map((l) => (

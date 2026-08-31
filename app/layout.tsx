@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Vertex — Search your learning in plain English",
+  title: "nexLearn — Search your learning in plain English",
   description:
-    "Vertex understands what you want to learn and finds the exact lessons across all your courses.",
+    "nexLearn understands what you want to learn and finds the exact lessons across all your courses.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
