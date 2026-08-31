@@ -106,6 +106,24 @@ export const ArrowUpRightIcon = (p: IconProps) => (
   </Svg>
 );
 
+export const ArrowRightIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </Svg>
+);
+
+export const StarIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 3.5l2.6 5.35 5.9.86-4.27 4.16 1.01 5.88L12 17.9l-5.25 2.71 1-5.88L3.5 9.57l5.9-.86L12 3.5z" />
+  </Svg>
+);
+
+export const LevelIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M5 20v-4M12 20v-9M19 20v-15" />
+  </Svg>
+);
+
 export const CheckIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="m5 13 4 4L19 7" />
