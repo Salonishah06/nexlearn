@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { VertexMark } from "../components/logo";
+import { NexLearnMark } from "../components/logo";
 import { Button } from "../components/button";
 import { SearchInput, Select } from "../components/input";
 import { Badge } from "../components/badge";
@@ -194,16 +194,16 @@ export default function DesignSystemPage() {
       <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr]">
         <section className="rounded-lg border border-neutral-200 bg-surface p-8 shadow-sm">
           <div className="flex items-center gap-3">
-            <VertexMark size={36} />
+            <NexLearnMark size={36} />
             <span className="font-display text-heading-2 font-bold text-neutral-900">
-              Vertex
+              nexLearn
             </span>
           </div>
           <h1 className="mt-6 font-display text-display-1 font-bold tracking-tight text-neutral-900">
             Design System
           </h1>
           <p className="mt-4 max-w-sm text-body-lg text-neutral-500">
-            A unified design language for the Vertex learning platform. Clean,
+            A unified design language for the nexLearn learning platform. Clean,
             modern and focused on clarity, consistency and intuitive learning
             experiences.
           </p>
@@ -565,7 +565,7 @@ export default function DesignSystemPage() {
       </div>
 
       <footer className="mt-10 text-center text-small text-neutral-500">
-        Vertex Design System · v1.0
+        nexLearn Design System · v1.0
       </footer>
     </main>
   );

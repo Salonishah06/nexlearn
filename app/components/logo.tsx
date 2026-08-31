@@ -1,8 +1,8 @@
 /*
-  Vertex mark — an angular "V" formed by two chevrons.
+  nexLearn mark — an angular "V" formed by two chevrons.
 */
 
-export function VertexMark({ size = 40 }: { size?: number }) {
+export function NexLearnMark({ size = 40 }: { size?: number }) {
   return (
     <svg
       width={size}

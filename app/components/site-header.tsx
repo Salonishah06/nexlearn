@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import { VertexMark } from "./logo";
+import { NexLearnMark } from "./logo";
 import { Button } from "./button";
 import { BellIcon } from "./icons";
 
@@ -19,9 +19,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-3 px-4 sm:gap-10 sm:px-6 lg:px-10">
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <VertexMark size={26} />
+          <NexLearnMark size={26} />
           <span className="hidden font-display text-heading-3 font-bold text-neutral-900 min-[400px]:inline">
-            Vertex
+            nexLearn
           </span>
         </Link>
         <nav className="flex min-w-0 items-center gap-3 sm:gap-7">
