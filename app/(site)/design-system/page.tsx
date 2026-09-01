@@ -1,17 +1,17 @@
 import type { ReactNode } from "react";
-import { NexLearnMark } from "../components/logo";
-import { Button } from "../components/button";
-import { SearchInput, Select } from "../components/input";
-import { Badge } from "../components/badge";
-import { StatusIndicator } from "../components/status";
-import { ProgressBar } from "../components/progress";
+import { NexLearnMark } from "../../components/logo";
+import { Button } from "../../components/button";
+import { SearchInput, Select } from "../../components/input";
+import { Badge } from "../../components/badge";
+import { StatusIndicator } from "../../components/status";
+import { ProgressBar } from "../../components/progress";
 import {
   CourseCard,
   LessonVideoCard,
   LessonCard,
   ResourceCard,
-} from "../components/card";
-import { NavBar, Breadcrumbs, Pagination } from "../components/navigation";
+} from "../../components/card";
+import { NavBar, Breadcrumbs, Pagination } from "../../components/navigation";
 import {
   BellIcon,
   SearchIcon,
@@ -35,7 +35,7 @@ import {
   GridIcon,
   TargetIcon,
   AccessibilityIcon,
-} from "../components/icons";
+} from "../../components/icons";
 
 /* ------------------------------------------------------------------ */
 /* Layout primitives for the specimen                                  */
