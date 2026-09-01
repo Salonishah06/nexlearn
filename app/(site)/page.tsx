@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Button } from "./components/button";
-import { SearchInput } from "./components/input";
+import { Button } from "../components/button";
+import { SearchInput } from "../components/input";
 import {
   CourseSummaryCard,
   type CourseSummary,
-} from "./components/course-summary-card";
-import { NextMark, DockerMark, TypeScriptMark } from "./components/brand-marks";
-import { ArrowRightIcon, StarIcon } from "./components/icons";
+} from "../components/course-summary-card";
+import { NextMark, DockerMark, TypeScriptMark } from "../components/brand-marks";
+import { ArrowRightIcon, StarIcon } from "../components/icons";
 
 /* Placeholder catalog data — replaced by Sanity content later. */
 const courses: CourseSummary[] = [
