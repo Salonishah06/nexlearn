@@ -188,6 +188,64 @@ export const AccessibilityIcon = (p: IconProps) => (
   </Svg>
 );
 
+/* ---------- Learning-outcome icons (keyed by `learningOutcome.icon`) ---------- */
+
+export const LayersIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="m12 3 9 5-9 5-9-5 9-5z" />
+    <path d="m3 12 9 5 9-5M3 17l9 5 9-5" />
+  </Svg>
+);
+
+export const WorkflowIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <rect x="3" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="14" width="7" height="7" rx="1" />
+    <path d="M10 6.5h4a3 3 0 0 1 3 3V14" />
+  </Svg>
+);
+
+export const GaugeIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 14 16 9" />
+    <path d="M4 18a8 8 0 1 1 16 0" />
+  </Svg>
+);
+
+export const RocketIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 3c3 1.5 5 4.5 5 9 0 2-.5 3.5-1 4.5H8c-.5-1-1-2.5-1-4.5 0-4.5 2-7.5 5-9z" />
+    <path d="M8 16c-2 1-3 3-3 5 2 0 4-1 5-3M16 16c2 1 3 3 3 5-2 0-4-1-5-3" />
+    <circle cx="12" cy="10" r="1.5" />
+  </Svg>
+);
+
+export const PuzzleIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M10 4a2 2 0 1 1 4 0v1h3a1 1 0 0 1 1 1v3h1a2 2 0 1 1 0 4h-1v3a1 1 0 0 1-1 1h-3v1a2 2 0 1 1-4 0v-1H6a1 1 0 0 1-1-1v-3H4a2 2 0 1 1 0-4h1V6a1 1 0 0 1 1-1h4V4z" />
+  </Svg>
+);
+
+export const ShieldIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+    <path d="m9 12 2 2 4-4" />
+  </Svg>
+);
+
+export const SparklesIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 4l1.8 4.2L18 10l-4.2 1.8L12 16l-1.8-4.2L6 10l4.2-1.8L12 4z" />
+    <path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9L18 15z" />
+  </Svg>
+);
+
+export const CodeIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" />
+  </Svg>
+);
+
 /* ---------- Filled variants (subset used in the specimen) ---------- */
 
 function SolidSvg({ size = 24, children, ...props }: IconProps & { children: React.ReactNode }) {

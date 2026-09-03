@@ -45,10 +45,12 @@ export const COURSE_QUERY = defineQuery(`
     "category": category->{title, "slug": slug.current, description},
     "durationSeconds": math::sum(modules[].lessons[]->durationSeconds),
     "lessonCount": count(modules[].lessons[]),
+    "moduleCount": count(modules),
     modules[]{
       _key,
       title,
       summary,
+      "durationSeconds": math::sum(lessons[]->durationSeconds),
       "lessons": lessons[]->{
         _id,
         title,
