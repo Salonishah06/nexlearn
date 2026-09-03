@@ -1,52 +1,21 @@
 import Link from "next/link";
 import { Button } from "../components/button";
 import { SearchInput } from "../components/input";
-import {
-  CourseSummaryCard,
-  type CourseSummary,
-} from "../components/course-summary-card";
-import { NextMark, DockerMark, TypeScriptMark } from "../components/brand-marks";
+import { CourseSummaryCard } from "../components/course-summary-card";
 import { ArrowRightIcon, StarIcon } from "../components/icons";
-
-/* Placeholder catalog data — replaced by Sanity content later. */
-const courses: CourseSummary[] = [
-  {
-    title: "Next.js for Production",
-    description:
-      "Build scalable, high-performance web applications with Next.js.",
-    level: "Intermediate",
-    duration: "18h 24m",
-    modules: "12 modules",
-    mark: <NextMark />,
-    href: "/courses/nextjs-for-production",
-  },
-  {
-    title: "Docker Essentials",
-    description:
-      "Containerize applications and streamline your development workflow.",
-    level: "Beginner",
-    duration: "10h 12m",
-    modules: "8 modules",
-    mark: <DockerMark />,
-    href: "/courses/docker-essentials",
-  },
-  {
-    title: "TypeScript Deep Dive",
-    description: "Go beyond the basics and write safer, more expressive code.",
-    level: "Intermediate",
-    duration: "14h 36m",
-    modules: "10 modules",
-    mark: <TypeScriptMark />,
-    href: "/courses/typescript-deep-dive",
-  },
-];
+import { sanityFetch, COURSES_QUERY } from "@/sanity/lib/index";
 
 const equalizer = [
   [38, 62, 48, 84, 58, 34, 72, 46],
   [52, 30, 66, 44, 88, 56, 40, 70],
 ];
 
-export default function Home() {
+export default async function Home() {
+  const courses = await sanityFetch({
+    query: COURSES_QUERY,
+    tags: ["course"],
+  });
+
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -94,11 +63,17 @@ export default function Home() {
             <ArrowRightIcon size={16} />
           </Link>
         </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course) => (
-            <CourseSummaryCard key={course.href} course={course} />
-          ))}
-        </div>
+        {courses.length > 0 ? (
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {courses.map((course) => (
+              <CourseSummaryCard key={course._id} course={course} />
+            ))}
+          </div>
+        ) : (
+          <p className="mt-8 text-body text-neutral-500">
+            No courses published yet.
+          </p>
+        )}
       </section>
 
       {/* Cadence note + decorative equalizer */}

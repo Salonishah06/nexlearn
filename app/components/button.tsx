@@ -1,4 +1,9 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
+import Link from "next/link";
 
 /*
   Button
@@ -32,6 +37,10 @@ const variants: Record<Variant, string> = {
   text: "px-1 text-primary-500 bg-transparent hover:text-primary-400 disabled:text-primary-300",
 };
 
+function classesFor(variant: Variant, size: Size, className: string) {
+  return `${base} ${sizes[size]} ${variants[variant]} ${className}`;
+}
+
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   size?: Size;
@@ -49,13 +58,39 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button
-      className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
-      {...props}
-    >
+    <button className={classesFor(variant, size, className)} {...props}>
       {iconLeft}
       {children}
       {iconRight}
     </button>
+  );
+}
+
+export interface ButtonLinkProps
+  extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+  variant?: Variant;
+  size?: Size;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
+}
+
+/* Same look as <Button>, rendered as a real link for navigation. */
+export function ButtonLink({
+  href,
+  variant = "primary",
+  size = "lg",
+  iconLeft,
+  iconRight,
+  className = "",
+  children,
+  ...props
+}: ButtonLinkProps) {
+  return (
+    <Link href={href} className={classesFor(variant, size, className)} {...props}>
+      {iconLeft}
+      {children}
+      {iconRight}
+    </Link>
   );
 }
